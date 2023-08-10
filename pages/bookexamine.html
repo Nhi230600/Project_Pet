@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Spa - Pet Project</title>
+    <link rel="stylesheet" href="../assets/css/bookspa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body>
+    <!-- Section Header -->
+    <section class="main-header">
+      <div class="header-logo">
+        <img class="logo-project" src="./public/image/logo.png" alt="">
+        <a href="" class="logo-name">NgáoService</a>
+      </div>
+      <div class="header-content">
+        <ul class="nav">
+          <li><a class="navHome" href="index.html">TRANG CHỦ</a></li>
+          <li><a class="navService" href="">DỊCH VỤ</a>
+            <ul class="service-sub">
+              <li><a href="index.html#cat-tia">Cắt tỉa lông tại nhà</a></li>
+              <li><a href="index.html#tam-vesinh">Tắm - Vệ sinh tại nhà</a></li>
+              <li><a href="index.html#best-combo">Combo tốt nhất</a></li>
+            </ul>
+          </li>
+
+          <li><a class="navBlog" href="">BLOG</a>
+            <ul class="service-sub">
+              <li><a href="https://mypet.vn/chia-se-kinh-nghiem-cham-soc-thu-cung/">Chia sẻ kinh nghiệm</a></li>
+              <li><a href="https://taphoamakudo.vn/pages/chamsocthucungtainha">Dịch vụ tại nhà</a></li>
+              <li><a href="https://nuoicun.com/category/goc-giai-tri/">Góc giải trí</a></li>
+            </ul>
+          </li>
+          <li><a class="navContact" href="contact.html">LIÊN HỆ</a></li>
+          <li><button onclick="location.href='book.html'" class="btn-book">ONLINE BOOKING <i class="fas fa-paper-plane"></i></button>
+            <ul class="service-sub">
+              <li><a href="bookspa.html">Đặt lịch Spa</a></li>
+              <li><a href="bookexamine.html">Đặt lịch khám bệnh</a></li>
+              <li><a href="booktrainer.html">Đặt lịch huấn luyện</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- // End Section Header -->
+
+    <!-- Section Main -->
+    <section class="main-content">
+      <div class="th-content">
+        BOOK ONLINE 24/7
+      </div>
+      <form class="form-book">
+        <div class="content-form">
+          <div class="content-form-heading">
+            <span>ĐẶT LỊCH KHÁM BỆNH</span>
+          </div>
+          <div class="note">
+            Đặt Lịch Nhanh <br>
+            Các trường được đánh dấu <span class="notice">*</span> là bắt buộc
+          </div>
+          <div class="yeucau">
+            <div class="th">
+              Tình trạng bệnh lý <span class="notice">*</span>
+            </div>
+            <div class="note-yeucau">
+              Vui lòng nhập tình trạng bệnh lý của thú cưng để NgáoService xem xét tình trạng và cử bác sĩ chuyên khoa đến chăm sóc cho pet của bạn nhé !
+            </div>
+            <div class="input-note">
+              <textarea name="note" id="inputStatus" cols="86" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="hoten">
+            <div class="th">
+              Thời gian hẹn khám <span class="notice">*</span>
+            </div>
+            <div class="input-name">
+              <input id="inputTime" type="datetime-local" class="inputhoten">
+            </div>
+          </div>
+          <div class="hoten">
+            <div class="th">
+              Tên thú cưng <span class="notice">*</span>
+            </div>
+            <div class="input-name">
+              <input id="inputName" type="text" class="inputhoten">
+            </div>
+          </div>
+          <div class="hoten">
+            <div class="th">
+              Loài <span class="notice">*</span>
+            </div>
+            <div class="choose">
+              <select id="inputSpecies" name="service" class="service-choose">
+                <option value="serviceName" class="serviceName">Chó</option>
+                <option value="serviceName">Mèo</option>
+                <option value="serviceName">Khác</option>
+              </select>
+            </div>
+          </div>
+          <div class="hoten">
+            <div class="th">
+              Thuộc giống <span class="notice">*</span>
+            </div>
+            <div class="input-name">
+              <input id="inputGiong" type="text" class="inputhoten">
+            </div>
+          </div>
+          <div class="hoten">
+            <div class="th">
+              Ghi chú
+            </div>
+            <div class="input-note">
+              <textarea name="note" id="inputNote" cols="86" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="send-request">
+            <button class="btn-send">
+              <span>GỬI YÊU CẦU</span>
+            </button>
+          </div>
+        </div>
+        <div class="view">
+          <div class="view-1">
+            BÀI VIẾT MỚI
+          </div>
+          <div class="view-2">
+            <div class="image-view">
+              <img class="pet-pregnant" src="../public/image/pet-pregnant.jpg" alt="">
+            </div>
+            <div class="th-view">
+              <a class="href-th" href="">Chó mang thai có nên tắm không ?</a>
+            </div>
+            <div class="view-more">
+              <button class="btn-viewmore">Xem thêm <i class="fas fa-angle-double-right"></i></button>
+            </div>
+          </div>
+          <div class="view-2">
+            <div class="image-view">
+              <img class="pet-pregnant" src="../public/image/pet-phocsoc.jpg" alt="">
+            </div>
+            <div class="th-view">
+              <a class="href-th" href="">Chó Phốc Sóc (Pomeranian): Đặc Điểm, Giá Tiền Và Cách Nuôi</a>
+            </div>
+            <div class="view-more">
+              <button class="btn-viewmore">Xem thêm <i class="fas fa-angle-double-right"></i></button>
+            </div>
+          </div>
+          
+          <div class="viewmore-news">
+            <button class="btn-viewmorenew"><span>Xem thêm</span></button>
+
+          </div>
+        </div>
+      </form>
+
+    </section>
+    <!-- // End Section Main -->
+
+    <section class="main-footer">
+      <div class="footer-logo">
+        <img class="logo-footer" src="./public/image/logo.png" alt="">
+        <div class="namelogo-footer">
+          NgáoService
+        </div>
+      </div>
+      <div class="footer-infor1">
+        <div class="th-in4-1">
+          ABOUT
+        </div>
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          PO BOX Collins Street West
+        </div>
+        <div class="phone-number">
+          <i class="fas fa-key"></i>
+          +84374540896
+        </div>
+        <div class="clock">
+          <i class="far fa-clock"></i>
+          Mon - Sun: 8AM - 8PM
+        </div>
+      </div>
+      <div class="footer-infor2">
+        <div class="th-in4-1">
+          SERVICE
+        </div>
+        <div class="location">
+          <i class="fas fa-link"></i>
+          <a class="link" href="#">Pet Service at home at HCMC</a>
+        </div>
+        <div class="phone-number">
+          <i class="fas fa-link"></i>
+          <a class="link" href="#">Pet Service at home at HN</a>
+        </div>
+        <div class="clock">
+          <i class="fas fa-link"></i>
+          <a class="link" href="#">Pet Service at home at Da Nang</a>
+        </div>
+      </div>
+      <div class="footer-infor3">
+        <div class="th-in4-1">
+          SOCIAL NETWORK
+        </div>
+        <div class="location">
+          <i class="fab fa-facebook-square"></i>
+          <a class="link" href="">Facebook</a>
+        </div>
+        <div class="phone-number">
+          <i class="fab fa-instagram"></i>
+          <a class="link" href="">Instagram</a>
+        </div>
+        <div class="clock">
+          <i class="fas fa-envelope"></i>
+          <a class="link" href="">Email</a>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>

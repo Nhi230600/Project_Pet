@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <title>Login</title>
+</head>
+<body>
+  <section class="main-content">
+    <div class="main-content-tieude">
+      ĐĂNG NHẬP ĐỂ CÙNG TRẢI NGHIỆM !
+    </div>
+    <div class="container">
+      <div class="container-image">
+        <img src="../public/image/petimage.png" class="container-image-pet">
+      </div>
+      <form onsubmit="return login()" action="" class="container-form-login">
+        <div class="container-form-login-tieude">
+          <span>ĐĂNG NHẬP</span>
+        </div>
+        <div class="container-form-login-username">
+          <span class="form-login-require">Username</span>
+          <input id="username" type="text" class="form-login-input">
+        </div>
+        <div class="container-form-login-username">
+          <span class="form-login-require">Mật khẩu</span>
+          <input id="password" type="password" class="form-login-input">
+        </div>
+        <div id="make-error"></div>
+        <div class="container-form-login-exist">
+          <span class="form-login-exist">Bạn chưa có tài khoản ? </span><br>
+          <a href="register.html" class="nav-form-login">ĐĂNG KÝ</a>
+        </div>
+        <div class="form-login-confirm">
+          <button onclick="return test()" class="btn-confirm">
+            <span>ĐĂNG NHẬP</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../assets/js/login.js"></script>
+</body>
+</html>
+<script>
+  function test() {
+    var error="";
+    //kiem tra username
+    if(username.value == "") {
+      username.className = "error";
+      error += "Username không được bỏ trống.<br>";
+    }
+    else error.className = "form-login-input"; 
+    
+    //kiem tra password
+    if(password.value == "") {
+      password.className = "error";
+      error += "Password không được bỏ trống.<br>";
+    }
+    else error.className = "form-login-input"; 
+
+    if(error!= "") {
+      document.getElementById('make-error').innerHTML = error;
+      return false;
+    }
+  }
+</script>

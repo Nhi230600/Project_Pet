@@ -1,0 +1,442 @@
+html,
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-header {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background-color: #FFF0F5;
+  position: relative;
+  top: 0;
+  border-bottom: 0.3vw dashed #FF99CC;
+  margin-bottom: 8vw;
+}
+.header-logo {
+  width: 20%;
+  height: auto;
+  display:flex;
+}
+.logo-project {
+  width: 10vw;
+  margin-right: 2vw;
+}
+.logo-name {
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:Fantasy;
+  font-size: 3vw;
+  font-weight: 800;
+  margin-top: 3.5vw;
+  text-shadow: 0.3vw 0vw 0.3vw #CC6633;
+
+}
+.header-content {
+  width: 80%;
+  height: auto;
+  margin-left: 15vw;
+  margin-top: 4vw;
+}
+.navHome {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navHome:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navService {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navService:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navBlog {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navBlog:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navContact {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: white;
+  background-color: #FF99CC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 2vw;
+  border-radius: 0.5vw;
+}
+.navContact:hover {
+  border-radius: 0.5vw;
+  background-color: #FF99CC;
+  color: white;
+  cursor: pointer;
+}
+.btn-book {
+  font-size: 1.3vw;
+  width: 100%;
+  height: 3.5vw;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: #FF99CC;
+  border: 1px dashed white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.btn-book:hover {
+  cursor: pointer;
+  padding: 0.5vw;
+  background-color: white;
+  color: #FF99CC;
+  border: 3px dashed #FF99CC;
+
+}
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  position: relative;
+}
+
+.nav li a {
+  text-decoration: none;
+  padding: 0.9vw 0.4vw;
+  display: block;
+}
+.nav li .btn-book {
+  text-decoration: none;
+  padding: 0.9vw 0.4vw;
+  display: block;
+}
+.nav ul.service-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0.5vw 0vw;
+  position: absolute;
+  background-color: #FFF0F5;
+  border: 3px dashed #FF99CC;
+  color: #eeeeee;
+  width: 20vw;
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+.nav li:hover>ul.service-sub {
+  display: block;
+
+}
+.nav ul.service-sub a {
+  padding: 0.3vw 0.9vw;
+  border-bottom: 1px solid white;
+  font-size: 1.3vw;
+}
+.nav ul.service-sub .btn-book {
+  padding: 0.3vw 0.9vw;
+  border-bottom: 1px solid white;
+  font-size: 1.3vw;
+  color: rebeccapurple;
+}
+.service-sub li:last-child a {
+  border: none;
+}
+.service-sub li:last-child .btn-book {
+  order: none;
+}
+.main-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color:white;
+  box-sizing: border-box;
+  margin-bottom: 5vw;
+  display: flex;
+
+}
+
+.content-form {
+  width: 60%;
+  height: auto;
+  position: absolute;
+}
+.form-1 {
+  width: 90%;
+  height: auto;
+  border: 0.2vw dashed #FF99CC;
+  border-radius: 0.5vw;
+  margin: 2vw 1vw;
+  padding: 2vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+}
+.tieude {
+  font-size: 2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0vw 0.2vw 0.2vw #FF99CC;
+  border-bottom: 0.1vw solid #CC6699;
+  text-align: center;
+}
+.name-phone {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+.name {
+  width: 50%;
+  height: auto;
+  margin-right: 2.5vw;
+}
+.phone {
+  width: 50%;
+  height: auto;
+}
+.th {
+  font-size: 1.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.sao {
+  color: red;
+}
+.input {
+  width: 100%;
+  height: 3vw;
+}
+.email {
+  width: 100%;
+  padding: 1vw;
+}
+.input-email {
+  width: 97%;
+  height: 3vw;
+}
+#input-message {
+  width: 97%;
+
+}
+.send-request {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.btn-send {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  border: 0.2vw dashed #FF99CC;
+  z-index: 1;
+  width: 30%;
+  height: 3vw;
+  font-size: 1.2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 0.5vw;
+  color: #CC6699;
+  border: 0.1vw solid #CC6699;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  cursor: pointer;
+}
+.btn-send::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #CC6699;
+  left: -100%;
+  top : 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-send:hover::before {
+  left: 0;
+}
+.btn-send span {
+  z-index: 10;
+}
+.btn-send:hover span {
+  color: white;
+}
+.content-contact {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  left: 60%;
+}
+.form-2 {
+  width: 80%;
+  height: 0;
+  border: 0.2vw solid #FF99CC;
+  border-radius: 0.5vw;
+  height: auto;
+  margin: 2vw 1vw;
+  padding: 2vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+}
+.th-contact {
+  font-size: 1.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  border-bottom: 0.1vw solid #CC6699;
+  text-shadow: 0vw 0.2vw 0.2vw #FF99CC;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+.name-company {
+  font-size: 1.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0.2vw 0.2vw 0vw #FF99CC;
+  border-bottom: 0.1vw dashed #CC6699;
+  text-align: center;
+}
+.location {
+  width: 100%;
+  height: auto;
+  display:flex;
+  margin-top: 3vw;
+
+}
+.location:last-child {
+  border-bottom: none;
+}
+.logo {
+  width: 20%;
+  height: auto;
+}
+.details {
+  width: 80%;
+  height: auto;
+  font-size: 1.3vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+}
+.img {
+  width: 70%;
+  height: auto;
+}
+.attr {
+  font-weight: 600;
+}
+.note-ghichu {
+  width: 90%;
+  font-size: 1.25vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0vw 0.2vw 0.2vw #FF99CC;
+  bottom: 0;
+  margin-top: 2vw;
+  margin-left: 1.5vw;
+  text-align: center;
+}
+
+.main-footer {
+  position: relative;
+  top: 100%;
+  width: 100%;
+  height: auto;
+  background-color: #FFF0F5;
+  display: block;
+  box-sizing: border-box;
+  padding: 1vw 3vw;
+  display: flex;
+}
+.footer-logo {
+  width: 30%;
+  height: auto;
+}
+.namelogo-footer {
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:Fantasy;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 0.1vw;
+  text-shadow: 0.3vw 0vw 0.3vw #CC6633;
+}
+.logo-footer {
+  width: 25%;
+  height: auto;
+}
+.footer-infor1 {
+  width: 25%;
+  height: auto;
+}
+.th-in4-1 {
+  font-size: 2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #FF33CC;
+  text-shadow: 0.2vw 0.2vw 0.2vw #CC6699;
+  margin-bottom: 1vw;
+}
+.location {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.phone-number {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.clock {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.footer-infor2 {
+  width: 25%;
+  height: auto;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  margin-left: 0.5vw;
+}
+.footer-infor3 {
+  width: 25%;
+  height: auto;
+}

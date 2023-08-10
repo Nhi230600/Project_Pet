@@ -1,0 +1,540 @@
+html,
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-header {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background-color: #FFF0F5;
+  position: relative;
+  top: 0;
+  border-bottom: 0.3vw dashed #FF99CC;
+  margin-bottom: 8vw;
+}
+.header-logo {
+  width: 20%;
+  height: auto;
+  display:flex;
+}
+.logo-project {
+  width: 10vw;
+  margin-right: 2vw;
+}
+.logo-name {
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:Fantasy;
+  font-size: 3vw;
+  font-weight: 800;
+  margin-top: 3.5vw;
+  text-shadow: 0.3vw 0vw 0.3vw #CC6633;
+
+}
+.header-content {
+  width: 80%;
+  height: auto;
+  margin-left: 15vw;
+  margin-top: 4vw;
+}
+.navHome {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navHome:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navService {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navService:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navBlog {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 3vw;
+}
+.navBlog:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+}
+.navContact {
+  font-size: 1.8vw;
+  text-decoration: none;
+  color: #FF99CC;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 2vw;
+}
+.navContact:hover {
+  border-radius: 5px;
+  background-color: #FF99CC;
+  color: white;
+  cursor: pointer;
+}
+.btn-book {
+  font-size: 1.3vw;
+  width: 100%;
+  height: 3.5vw;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  background-color: #FF99CC;
+  border: 1px dashed white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.btn-book:hover {
+  cursor: pointer;
+  padding: 0.5vw;
+  background-color: white;
+  color: #FF99CC;
+  border: 3px dashed #FF99CC;
+
+}
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  position: relative;
+}
+
+.nav li a {
+  text-decoration: none;
+  padding: 0.9vw 0.4vw;
+  display: block;
+}
+.nav li .btn-book {
+  text-decoration: none;
+  padding: 0.9vw 0.4vw;
+  display: block;
+}
+.nav ul.service-sub {
+  list-style: none;
+  margin: 0;
+  padding: 0.5vw 0vw;
+  position: absolute;
+  background-color: #FFF0F5;
+  border: 3px dashed #FF99CC;
+  color: #eeeeee;
+  width: 20vw;
+  display: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+.nav li:hover>ul.service-sub {
+  display: block;
+
+}
+.nav ul.service-sub a {
+  padding: 0.3vw 0.9vw;
+  border-bottom: 1px solid white;
+  font-size: 1.3vw;
+}
+.nav ul.service-sub .btn-book {
+  padding: 0.3vw 0.9vw;
+  border-bottom: 1px solid white;
+  font-size: 1.3vw;
+  color: rebeccapurple;
+}
+.service-sub li:last-child a {
+  border: none;
+}
+.service-sub li:last-child .btn-book {
+  order: none;
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: block;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.th-content {
+  width: 100%;
+  height: auto;
+  font-size: 4vw;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0.3vw 0vw 0.3vw #FF99CC;
+  border-top: 0.2vw dashed #FF99CC;
+  border-bottom: 0.1vw dashed #FF99CC;
+  background-color: #FFF0F5;
+}
+.form-book {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  box-sizing: border-box;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2vw 3vw;
+  display: flex;
+  position: relative;
+}
+.content-form {
+  width: 70%;
+  height: auto;
+  border: 0.2vw dashed #FF99CC;
+  padding: 3vw 2vw;
+  background-color: #FFF0F5;
+  border-radius: 0.5vw;
+  box-sizing: border-box;
+}
+.content-form-heading {
+  font-size: 2.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3vw;
+  border-bottom: 0.1vw dashed #CC6699;
+  text-shadow: 0.2vw 0.2vw 0vw #FF99CC;
+}
+.note {
+  font-size: 1vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 550;
+  margin-bottom: 2vw;
+}
+.notice {
+  color: red;
+}
+.yeucau {
+  width: 100%;
+  height: auto;
+}
+.th {
+  font-size: 1.4vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.note-yeucau {
+  font-size: 1vw;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 1vw;
+}
+.choose {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+.service-choose {
+  width: 90%;
+  height: 3vw;
+  font-size: 1.2vw;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  padding: 0.5vw;
+}
+
+.serviceName {
+  font-family: 'Courier New', Courier, monospace;
+}
+.hoten {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+
+.inputhoten {
+  width: 89.5%;
+  height: 3vw;
+}
+.address-email {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-bottom: 2vw;
+}
+.address {
+  width: 45%;
+
+}
+.th-address {
+  font-size: 1.4vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.th-email {
+  font-size: 1.4vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+.email {
+  width: 50%;
+}
+#note-input {
+  width: 90%;
+
+}
+.send-request {
+  width: 100%;
+  height: auto;
+}
+.btn-send {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  border: 0.2vw dashed #FF99CC;
+  z-index: 1;
+  width: 30%;
+  height: 3vw;
+  font-size: 1.2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 0.5vw;
+  color: #CC6699;
+  border: 0.1vw solid #CC6699;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  cursor: pointer;
+}
+.btn-send::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #CC6699;
+  left: -100%;
+  top : 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-send:hover::before {
+  left: 0;
+}
+.btn-send span {
+  z-index: 10;
+}
+.btn-send:hover span {
+  color: white;
+}
+.view {
+  width: 20%;
+  height: auto;
+  margin-left: 2vw;
+  position: absolute;
+  top: 2%;
+  left: 70%;
+
+}
+.view-1 {
+  width: 100%;
+  font-size: 2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0vw 0.3vw 0.3vw #FF99CC;
+  border-bottom: 0.1vw solid #FF99CC;
+  margin-bottom: 2vw;
+}
+.view-2 {
+  width: 100%;
+  border: 0.1vw solid #FF99CC;
+  height: auto;
+  display: block;
+  border-radius: 0.5vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  margin-bottom: 2vw;
+}
+.image-view {
+  width: 100%;
+  height: auto;
+}
+.pet-pregnant {
+  width: 100%;
+  height: 15vw;
+  border-top-left-radius: 0.5vw;
+  border-top-right-radius: 0.5vw;
+}
+.th-view {
+  font-size: 1.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin: 0.5vw;
+}
+.view-more {
+  width: 100%;
+  height: auto;
+  margin: 0.5vw;
+}
+.btn-viewmore {
+  width: 95%;
+  height: 3vw;
+  font-size: 1.3vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  background-color: #FF99CC;
+  border: 0.1vw dashed white;
+  color: white;
+  border-radius: 0.3vw;
+  
+}
+.btn-viewmore:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #CC6699;
+  border: 0.15vw dashed #CC6699;
+  font-weight: 600;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+}
+.href-th {
+  text-decoration: none;
+  font-size: 1.5vw;
+}
+.viewmore-news {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.btn-viewmorenew {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  border: 0.2vw dashed #FF99CC;
+  z-index: 1;
+  width: 100%;
+  height: 3vw;
+  font-size: 1.2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 0.5vw;
+  color: #CC6699;
+  border: 0.1vw dashed #FF99CC;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  cursor: pointer;
+}
+.btn-viewmorenew::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FF99CC;
+  left: -100%;
+  top : 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-viewmorenew:hover::before {
+  left: 0;
+}
+.btn-viewmorenew span {
+  z-index: 10;
+}
+.btn-viewmorenew:hover span {
+  color: white;
+}
+.main-footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #FFF0F5;
+  display: block;
+  box-sizing: border-box;
+  padding: 1vw 3vw;
+  display: flex;
+}
+.footer-logo {
+  width: 30%;
+  height: auto;
+}
+.namelogo-footer {
+  text-decoration: none;
+  color: #FF99CC;
+  font-family:Fantasy;
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 0.1vw;
+  text-shadow: 0.3vw 0vw 0.3vw #CC6633;
+}
+.logo-footer {
+  width: 25%;
+  height: auto;
+}
+.footer-infor1 {
+  width: 25%;
+  height: auto;
+}
+.th-in4-1 {
+  font-size: 2vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #FF33CC;
+  text-shadow: 0.2vw 0.2vw 0.2vw #CC6699;
+  margin-bottom: 1vw;
+}
+.location {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.phone-number {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.clock {
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+}
+.footer-infor2 {
+  width: 25%;
+  height: auto;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  margin-left: 0.5vw;
+}
+.footer-infor3 {
+  width: 25%;
+  height: auto;
+}

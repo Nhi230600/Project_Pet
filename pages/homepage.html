@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/homepage.css">
+    <title>HomePage - Pet Project</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function(){
+        $('.accordion-item.active .accordion-body').slideDown();
+        $('.accordion-header').click(function(){
+          $(this).parent().toggleClass('active');
+          $(this).parent().children('.accordion-body').slideToggle();
+        })
+      });
+    </script>
+    <!-- Section Header -->
+
+    <section class="main-header">
+      <div class="main-header-logo">
+        <div class="header-logo">
+          <img class="logo-project" src="../public/image/logo.png" alt="">
+          <a href="" class="logo-name">NgáoService</a>
+        </div>
+        <div class="header-form-search">
+          <div class="form-search-input">
+            <form class="form-search">
+              <input id="search" class="form-input-search" type="text" name="search" placeholder="Tìm kiếm ..." />
+              <button class="form-input-button-search" type="submit"><i class="fa fa-search" aria-hidden="true" style="color: #CC6699;"></i></button>
+            </form>
+          </div>
+          <div class="form-cart">
+            <button id="cart">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+              Giỏ Hàng
+            </button>
+          </div>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Giỏ Hàng</h5>
+                  <span class="close">&times;</span>
+              </div>
+              <div class="modal-body">
+                  <div class="cart-row">
+                      <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                      <span class="cart-price cart-header cart-column">Giá</span>
+                      <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                  </div>
+                  <div class="cart-items">
+                    <div class="cart-row">
+                      <div class="cart-item cart-column">
+                          <img class="cart-item-image" src="../public/image/thuc-an-hat-smartheart-danh-cho-cho-con-vi-bo-va-sua-.jpg" width="100" height="100">
+                          <span class="cart-item-title">Thức ăn hạt Smartheart dành cho chó con vị bò và sữa</span>
+                      </div>
+                      <span class="cart-price cart-column">34000</span>
+                      <div class="cart-quantity cart-column">
+                          <input class="cart-quantity-input" type="number" value="1">
+                          <button class="btn btn-danger" type="button">Xóa</button>
+                      </div>
+                    </div>
+                    <div class="cart-row">
+                      <div class="cart-item cart-column">
+                          <img class="cart-item-image" src="../public/image/pet-meal.jpg" width="100" height="100">
+                          <span class="cart-item-title">Thức ăn hạt cho chó con vị sữa Ganador</span>
+                      </div>
+                      <span class="cart-price cart-column">25000</span>
+                      <div class="cart-quantity cart-column">
+                          <input class="cart-quantity-input" type="number" value="2">
+                          <button class="btn btn-danger" type="button">Xóa</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-total">
+                    <strong class="cart-total-title">Tổng Cộng:</strong>
+                    <span class="cart-total-price">0VNĐ</span>
+                  </div>
+                </div>
+
+              <div class="modal-footer">
+                <div class="modal-footer-request">
+                  <button class="btn-close close-footer">
+                    <span>Đóng</span>
+                  </button>
+                  <button onclick="location.href=''" class="btn-pay order">
+                    <span>Thanh Toán</span>
+                  </button>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-content">
+        <ul class="nav">
+          <li><a class="navHome" href="">TRANG CHỦ</a></li>
+          <li><a class="navService" href="">DỊCH VỤ</a>
+            <ul class="service-sub">
+              <li data-url="cat-tia"><a>Cắt tỉa lông tại nhà</a></li>
+              <li><a href="#content-tam-vesinh">Tắm - Vệ sinh tại nhà</a></li>
+              <li><a href="#best-combo">Combo tốt nhất</a></li>
+            </ul>
+          </li>
+          <li><a class="navBlog" href="">BLOG</a>
+            <ul class="service-sub">
+              <li><a href="https://mypet.vn/chia-se-kinh-nghiem-cham-soc-thu-cung/">Chia sẻ kinh nghiệm</a></li>
+              <li><a href="https://taphoamakudo.vn/pages/chamsocthucungtainha">Dịch vụ tại nhà</a></li>
+              <li><a href="https://nuoicun.com/category/goc-giai-tri/">Góc giải trí</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="navContact">LIÊN HỆ</a></li>
+          <li><button onclick="location.href='book.html'" class="btn-book">ONLINE BOOKING <i class="fas fa-paper-plane"></i></button>
+            <ul class="service-sub">
+              <li><a href="bookspa.html">Đặt lịch Spa</a></li>
+              <li><a href="bookexamine.html">Đặt lịch khám bệnh</a></li>
+              <li><a href="booktrainer.html">Đặt lịch huấn luyện</a></li>
+            </ul>
+          </li>
+          <li><button class="btn-logout" id="button-logout" onclick="location.href='/index.html'">ĐĂNG XUẤT </button></li>         
+        </ul>
+      </div>
+    
+    </section>
+    <!-- // End Section Header -->
+
+    <!-- Section Main -->
+    <section id="content-1" class="main-content">
+      <div class="content-first">
+        <div class="content-first1">
+          <div class="image-pet">
+            <img class="imgpet" src="../public/image/pet.png">
+          </div>
+          <div class="th1">
+            DỊCH VỤ THÚ CƯNG TẠI NHÀ
+          </div>
+          <div class="th2">
+            UY TÍN HÀNG ĐẦU VIỆT NAM
+          </div>
+          <div class="booking">
+            <button onclick="location.href='book.html'" class="book">
+              <span>BOOK NOW</span>
+            </button>
+          </div>
+        </div>
+        <div class="content-first2">
+          <img class="img-pet2" src="../public/image/petimage.png">
+        </div>
+      </div>
+      <div class="content-second">
+        <div class="second1">
+          <div class="th2-1">
+            DỊCH VỤ HÀNG ĐẦU
+          </div>
+          <div class="img2-1">
+            <img class="petcute" src="../public/image/petcute.png">
+          </div>
+        </div>
+        <div class="second2">
+          <div class="cut">
+            <img class="pet-cut" src="../public/image/pet-cut.png">
+          </div>
+          <div class="petgrooming">
+            PET GROOMING
+          </div>
+          <div class="content-petgrooming">
+            Chúng tôi biết cách làm thế nào để thú cưng của bạn trở nên đẳng cấp hơn cá tính hơn. Với dịch vụ cắt tỉa lông chó / mèo chúng tôi sẽ giúp các bé trở thành phiên bản hoàn hảo nhất.
+          </div>
+        </div>
+        <div class="second3">
+          <div class="cut">
+            <img class="pet-cut" src="../public/image/pet-ngao.png">
+          </div>
+          <div class="petgrooming">
+            NGÁO SHOP
+          </div>
+          <div class="content-petgrooming">
+            Cùng với hơn 3.000 khách hàng đã luôn tin tưởng, đồng hành, chúng tôi luôn đặt ra những mục tiêu và thử thách mới. NgáoService cung cấp các dịch vụ rất đa dạng, phục vụ một cách tốt nhất cho pet của bạn.
+          </div>
+        </div>
+        <div class="second4">
+          <div class="cut">
+            <img class="pet-cut" src="../public/image/pet-home.png">
+          </div>
+          <div class="petgrooming">
+            PET HOME
+          </div>
+          <div class="content-petgrooming">
+            Mọi hành động ở NgáoService đều bắt đầu từ sứ mệnh Trao Gửi Yêu Thương. Mọi thú cưng mới khi đến với chúng tôi đều được quan tâm đặc biệt bởi đội ngũ Nhân viên nhiều kinh nghiệm.
+          </div>
+        </div>
+      </div>
+      <div class="content-third" id="content-tam-vesinh">
+        <div class="third-1" id="tam-vesinh">
+          <div class="in4-price">
+            Thông tin & Bảng giá
+          </div>
+          <div class="service-name">
+            DỊCH VỤ TẮM - VỆ SINH <span class="home">TẠI NHÀ</span>
+          </div>
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              DỊCH VỤ BAO GỒM
+            </div>
+            <div class="accordion-body">
+              <ul>
+                <li>CẠO BÀN CHÂN / BỤNG / HẬU MÔN</li>
+                <li>CẮT & MÀI NHẴN MÓNG CHÂN</li>
+                <li>VỆ SINH TAI & KHỬ MÙI TUYẾN HÔI</li>
+                <li>TẮM SẠCH BẰNG 2 LOẠI SỮA TẮM </li>
+                <li>SẤY & CHẢI BUNG XÙ LÔNG</li>
+                <li>XỊT THƠM BẰNG NƯỚC HOA</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              BẢNG GIÁ
+            </div>
+            <div class="accordion-body">
+              <ul>
+                <li>Dưới 10 kg: 300.000đ</li>
+                <li>Dưới 20 kg: 380.000đ</li>
+                <li>Dưới 30 kg: 460.000đ</li>
+                <li>Dưới40 kg: 540.000đ </li>
+                <li>Trên 40 kg: Liên hệ</li>
+              </ul>
+            </div>
+          </div>
+          <div class="viewmore">
+            <button class="btn-more">
+              <span>XEM THÊM</span>
+            </button>
+            <button onclick="location.href='book.html'" class="btn-booknow">
+              <span>ĐẶT LỊCH NGAY</span>
+            </button>
+          </div>
+        </div>
+        <div class="third-2">
+          <img class="thucung" src="../public/image/thu-cung-2.jpg" alt="">
+        </div>
+      </div>
+      <div class="content-fourth" id="content-cat-tia">
+        <div class="fourth-1">
+          <img class="pet-spa" src="../public/image/pet-spa.jpg" alt="">
+        </div>
+        <div class="fourth-2" id="cat-tia">
+          <div class="in4-price">
+            Thông tin & Bảng giá
+          </div>
+          <div class="service-name">
+            DỊCH VỤ CẮT TỈA LÔNG <span class="home">TẠI NHÀ</span>
+          </div>
+          <div class="thongtinbanggia">
+            <div class="infor">
+              <ul>
+                <li>Cắt Gọn Lông</li>
+                <li>Tỉa Lông Tạo Kiểu</li>
+                <li>Cạo Lông</li>
+              </ul>
+            </div>
+            <div  class="banggia">
+              CHỈ TỪ 400.000
+            </div>
+          </div>
+          <div class="viewmore">
+            <button class="btn-more">
+              <span>XEM THÊM</span>
+            </button>
+            <button onclick="location.href='book.html'" class="btn-booknow">
+              <span>ĐẶT LỊCH NGAY</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content-fifth" id="best-combo">
+        <div class="fifth-1">
+          <div class="name-content">
+            NgáoService <span class="combo">COMBO</span>
+          </div>
+          <div class="offer">
+            <img class="img-offer" src="../public/image/offer.png" alt="">
+          </div>
+        </div>
+        <div class="fifth-2">
+          <div class="number">
+            <img class="combo" src="../public/image/combo1.png" alt="">
+          </div>
+          <div class="label">
+            COMBO 1
+          </div>
+          <div class="price-combo">
+            CHỈ TỪ <br><span class="price-service">200.000VND</span>
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Tắm sấy
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Vệ sinh / Xịt thơm
+          </div>
+          <div class="wash">
+            <i class="fas fa-minus-circle" style="color: #5d697e;"></i>
+            Cạo lông
+          </div>
+          <div class="wash">
+            <i class="fas fa-minus-circle" style="color: #5d697e;"></i>
+            Cắt tỉa / Tạo kiểu
+          </div>
+          <button onclick="location.href='book.html'" class="btn-book">
+            <i class="fas fa-pencil-alt" style="color: #9d626e;"></i>
+            <span>ĐẶT LỊCH NGAY</span>
+          </button>
+        </div>
+        <div class="fifth-3">
+          <div class="number">
+            <img class="combo" src="../public/image/combo2.png" alt="">
+          </div>
+          <div class="label">
+            COMBO 2
+          </div>
+          <div class="price-combo">
+            CHỈ TỪ <br><span class="price-service">300.000VND</span>
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Tắm sấy
+          </div>
+          <div class="wash">
+            <i class="fas fa-minus-circle" style="color: #5d697e;"></i>
+            Vệ sinh / Xịt thơm
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Cạo lông
+          </div>
+          <div class="wash">
+            <i class="fas fa-minus-circle" style="color: #5d697e;"></i>
+            Cắt tỉa / Tạo kiểu
+          </div>
+          <button onclick="location.href='book.html'" class="btn-book">
+            <i class="fas fa-pencil-alt" style="color: #9d626e;"></i>
+            <span>ĐẶT LỊCH NGAY</span>
+          </button>
+        </div>
+        <div class="fifth-4">
+          <div class="number">
+            <img class="combo" src="../public/image/combo3.png" alt="">
+          </div>
+          <div class="label">
+            COMBO 3
+          </div>
+          <div class="price-combo">
+            CHỈ TỪ <br><span class="price-service">400.000VND</span>
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Tắm sấy
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Vệ sinh / Xịt thơm
+          </div>
+          <div class="wash">
+            <i class="fas fa-minus-circle" style="color: #5d697e;"></i>
+            Cạo lông
+          </div>
+          <div class="wash">
+            <i class="fas fa-check-square" style="color: #5c7f1a;"></i>
+            Cắt tỉa / Tạo kiểu
+          </div>
+          <button onclick="location.href='book.html'" class="btn-book">
+            <i class="fas fa-pencil-alt" style="color: #9d626e;"></i>
+            <span>ĐẶT LỊCH NGAY</span>
+          </button>
+        </div>
+      </div>
+      <div class="content-trainer">
+        <div class="th-trainer">
+          POPULAR <span class="trainer">TRAINER</span>
+        </div>
+        <div class="list-trainer">
+          <div class="trainer">
+            <div class="image-trainer">
+              <img class="img-trainer" src="../public/image/trainer-1.jpg.webp" alt="">
+            </div>
+            <div class="name-trainer">
+              Peter Ronson
+            </div>
+            <div class="role">
+              PET INSTRUCTOR
+            </div>
+            <div class="send-request">
+              <button class="btn-send">
+                <span>XEM THÊM CHI TIẾT</span>
+              </button>
+            </div>
+          </div>
+          <div class="trainer">
+            <div class="image-trainer">
+              <img class="img-trainer" src="../public/image/trainer-2.jpg" alt="">
+            </div>
+            <div class="name-trainer">
+              Emilia Johnson
+            </div>
+            <div class="role">
+              FOUNDER
+            </div>
+            <div class="send-request">
+              <button class="btn-send">
+                <span>XEM THÊM CHI TIẾT</span>
+              </button>
+            </div>
+          </div>
+          <div class="trainer">
+            <div class="image-trainer">
+              <img class="img-trainer" src="../public/image/trainer-3.jpg" alt="">
+            </div>
+            <div class="name-trainer">
+              Barbra Stevens
+            </div>
+            <div class="role">
+              ASSISTENT
+            </div>
+            <div class="send-request">
+              <button class="btn-send">
+                <span>XEM THÊM CHI TIẾT</span>
+              </button>
+            </div>
+          </div>
+          <div class="trainer">
+            <div class="image-trainer">
+              <img class="img-trainer" src="../public/image/trainer-4.jpg" alt="">
+            </div>
+            <div class="name-trainer">
+              Peter Ronson
+            </div>
+            <div class="role">
+              PET INSTRUCTOR
+            </div>
+            <div class="send-request">
+              <button class="btn-send">
+                <span>XEM THÊM CHI TIẾT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="more-trainer">
+          <button onclick="location.href=''" class="btn-more-trainer">
+            <span>XEM THÊM TRAINER TẠI ĐÂY NHÉ !</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-heading">
+          <span>SẢN PHẨM NỔI BẬT</span>
+        </div>
+        <ul>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/pet-meal.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn hạt cho chó con vị sữa Ganador</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">25000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141441414780.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn chó con Premium by Nature</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">190000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141441552066.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn chó con Iskhan Baby Starter</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money"> 159000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product no-margin">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141442129237.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn chó con Zenith Grain Free</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">450000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141442383826.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn cho chó mẹ và chó con ROYAL CANIN Mini Starter Mother & Babydog
+                    </h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">255000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141444258439.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn cho chó mẹ và chó con MOSHM Babydog & Mother Nutrition</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">485000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141445126662.jpg"
+                        alt="">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Xương orgo vị trái cây</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">25000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+            <li class="main-product no-margin">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../public/image/top-thuc-an-cho-cho-ngon-bo-duong-ma-chu-cho-nao-cung-me-202104141446512524.jpg">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Thức ăn Home Dog Moisture cho chó nhỏ Corgi, Bull pháp, Poodle</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">220000</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="more-trainer">
+          <button onclick="location.href=''" class="btn-more-trainer">
+            <span>XEM THÊM SẢN PHẨM</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="content-sixth">
+        <div class="sixth-1">
+          CHÚNG TÔI LUÔN <span class="sansang">SẴN SÀNG </span>PHỤC VỤ BẠN
+        </div>
+        <div class="sixth-2">
+          <div class="hotline">
+            <i class="fas fa-phone-alt"></i>
+            HOTLINE 24/7 LIÊN HỆ - <span class="phonenumber">0374540896</span>
+          </div>
+        </div>
+      </div>
+      <div class="content-seventh">
+        <div class="seventh-1">
+          Hotline hỗ trợ 24/7 của chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn.
+        </div>
+      </div>
+    </section> 
+    <!-- // End Section Main -->
+    <section class="main-footer">
+      <div class="footer-logo">
+        <img class="logo-footer" src="../public/image/logo.png" alt="">
+        <div class="namelogo-footer">
+          NgáoService
+        </div>
+      </div>
+      <div class="footer-infor1">
+        <div class="th-in4-1">
+          ABOUT
+        </div>
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          PO BOX Collins Street West
+        </div>
+        <div class="phone-number">
+          <i class="fas fa-key"></i>
+          +84374540896
+        </div>
+        <div class="clock">
+          <i class="far fa-clock"></i>
+          Mon - Sun: 8AM - 8PM
+        </div>
+      </div>
+      <div class="footer-infor2">
+        <div class="th-in4-1">
+          SERVICE
+        </div>
+        <div class="location">
+          <i class="fas fa-link"></i>
+          <a class="link" href="">Pet Service at home at HCMC</a>
+        </div>
+        <div class="phone-number">
+          <i class="fas fa-link"></i>
+          <a class="link" href="">Pet Service at home at HN</a>
+        </div>
+        <div class="clock">
+          <i class="fas fa-link"></i>
+          <a class="link" href="">Pet Service at home at Da Nang</a>
+        </div>
+      </div>
+      <div class="footer-infor3">
+        <div class="th-in4-1">
+          SOCIAL NETWORK
+        </div>
+        <div class="location">
+          <i class="fab fa-facebook-square"></i>
+          <a class="link" href="">Facebook</a>
+        </div>
+        <div class="phone-number">
+          <i class="fab fa-instagram"></i>
+          <a class="link" href="">Instagram</a>
+        </div>
+        <div class="clock">
+          <i class="fas fa-envelope"></i>
+          <a class="link" href="">Email</a>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="/assets/js/homepage.js"></script>
+  </body>
+</html>

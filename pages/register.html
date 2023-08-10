@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/register.css">
+  <title>Register</title>
+</head>
+<body>
+  <section class="main-content">
+    <div class="main-content-tieude">
+      <span>ĐĂNG KÝ TÀI KHOẢN <br>ĐỂ TIẾP TỤC TRẢI NGHIỆM DỊCH VỤ CỦA CHÚNG TÔI NHÉ !</span>
+    </div>
+    <div class="container">
+      <div class="container-image">
+        <img src="../public/image/petimage.png" class="container-image-pet">
+      </div>
+      <form onsubmit="return register()" method="post" action="" class="container-form-register">
+        <div class="container-form-register-tieude">
+          <span>ĐĂNG KÝ</span>
+        </div>
+        <div class="container-form-register-username">
+          <span class="form-register-require">Username</span>
+          <input id="username" type="text" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Họ tên</span>
+          <input id="name" type="text" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Số điện thoại đăng ký</span>
+          <input id="phonenumber" type="text" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Mật khẩu</span>
+          <input id="password" type="password" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Nhập lại mật khẩu</span>
+          <input id="repeatpassword" type="password" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Địa chỉ</span>
+          <input id="address" type="text" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-username">
+          <span class="form-register-require">Email</span>
+          <input id="email" type="text" class="form-register-input">
+        </div>
+
+        <div class="container-form-register-exist">
+          <span class="form-register-exist">Bạn đã có tài khoản ? </span><br>
+          <a href="login.html" class="nav-form-login">ĐĂNG NHẬP</a>
+        </div>
+        <div id="make-error"></div>
+
+        <div class="form-register-confirm">
+          <button onclick="return test()" class="btn-confirm">
+            <span>ĐĂNG KÝ</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../assets/js/register.js"></script>
+</body>
+</html>
+<script>
+  function test() {
+    var error = "";
+    //kiem tra username
+    var username = document.getElementById("username");
+    if(username.value == "") {
+      username.className = "error";
+      error += "Username không được bỏ trống.<br>";
+    } else if(username.value.length>20) {
+      username.className = "error";
+      error += "Username quá dài.<br>"
+    } 
+    else error.className = "form-register-input"; 
+    
+    //kiem tra name
+    var name = document.getElementById("name");
+    if(name.value == "") {
+      name.className = "error";
+      error += "Họ tên không được bỏ trống.<br>";
+    } else if(name.value.length > 20) {
+      name.className = "error";
+      error += "Họ tên quá dài.<br>"
+    }
+    else error.className = "form-register-input"; 
+    
+    //kiem tra so dien thoai
+    var regExp = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    var phonenumber = document.getElementById("phonenumber");
+    if(phonenumber.value == "") {
+      phonenumber.className = "error";
+      error += "Số điện thoại đăng ký không được bỏ trống.<br>";
+    } else if(!regExp.test(phonenumber.value)){
+      phonenumber.className = "error";
+      error += "Số điện thoại không hợp lệ.<br>";
+    }
+    else error.className = "form-register-input"; 
+    
+    //kiem tra mat khau
+    var password = document.getElementById("password");
+    if(password.value == "") {
+      password.className = "error";
+      error += "Mật khẩu không được bỏ trống.<br>";
+    } else if(password.value.length < 8) {
+      password.className = "error";
+      error += "Mật khẩu phải chứa ít nhất 8 ký tự.<br>"
+    }
+    else error.className = "form-register-input"; 
+
+    //kiem tra nhap lai mat khau
+    var repeatpassword = document.getElementById("repeatpassword");
+    if(repeatpassword.value == "") {
+      repeatpassword.className = "error";
+      error += "Mật khẩu cần được xác nhận.<br>";
+    } else if(repeatpassword.value != password.value ) {
+      repeatpassword.value = "error";
+      error += "Mật khẩu xác nhận không trùng khớp.<br>"
+    }
+    else error.className = "form-register-input"; 
+    
+    //kiem tra dia chi
+    var address = document.getElementById("address");
+    if(address.value == "") {
+      address.className = "error";
+      error += "Địa chỉ không được bỏ trống.<br>";
+    }
+    else error.className = "form-register-input"; 
+
+    //kiem tra email
+    var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var email = document.getElementById("email");
+    if(email.value == "") {
+      email.className = "error";
+      error += "Email không được phép bỏ trống.<br>";
+    } else if(!regEmail.test(email.value)){
+      email.className = "error";
+      error += "Email không hợp lệ.<br>";
+    }
+    else error.className = "form-register-input";
+
+
+    if(error!= "") {
+      document.getElementById('make-error').innerHTML = error;
+      return false;
+    }
+  }
+</script>

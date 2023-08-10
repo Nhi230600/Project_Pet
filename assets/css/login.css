@@ -1,0 +1,161 @@
+html,
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #FFF0F5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-content {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  top: 0;
+  margin-bottom: 9vw;
+}
+.main-content-tieude {
+  width: 100%;
+  height: auto;
+  font-size: 3vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 6vw;
+  text-shadow: 0.2vw 0.2vw 0vw #FF99CC;
+}
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #FFF0F5;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 5vw;
+}
+.container-image {
+  width: 40%;
+  height: auto;
+  margin-top: 8vw;
+}
+.container-image-pet {
+  width: 100%;
+  height: auto;
+}
+.container-form-login {
+  width: 60%;
+  height: auto;
+  border: 0.2vw solid #FF99CC;
+  background-color: white;
+  margin: 1.5vw;
+  border-radius: 0.5vw;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2vw;
+  margin-bottom: 9vw;
+}
+.container-form-login-tieude {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 600;
+  text-shadow: 0.2vw 0.2vw 0vw #FF99CC;
+  margin-bottom: 2.5vw;
+}
+.container-form-login-username {
+  width: 100%;
+  height: auto;
+}
+.form-login-require {
+  font-size: 1.5vw;
+  font-weight: 550;
+}
+.form-login-input {
+  width: 95%;
+  height: 3vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #FF99CC;
+  margin-bottom: 2vw;
+}
+#make-error {
+  color: red;
+  margin-bottom: 2vw;
+  margin-top: -1vw;
+}
+.error {
+  border: 0.2vw solid red;
+  background-color: yellow;
+  width: 95%;
+  height: 3vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #FF99CC;
+  margin-bottom: 2vw;
+}
+.container-form-login-exist {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 3vw;
+  margin-top: 1vw;
+  font-size: 1.4vw;
+}
+.nav-form-login {
+  text-decoration: none;
+  font-weight: 600;
+}
+.form-login-confirm {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.btn-confirm {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  border: 0.2vw dashed #FF99CC;
+  z-index: 1;
+  width: 30%;
+  height: 3vw;
+  font-size: 1.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 0.5vw;
+  color: #CC6699;
+  border: 0.1vw solid #CC6699;
+  box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -moz-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.3vw #FF99CC;
+  cursor: pointer;
+}
+.btn-confirm::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #CC6699;
+  left: -100%;
+  top : 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.btn-confirm:hover::before {
+  left: 0;
+}
+.btn-confirm span {
+  z-index: 10;
+}
+.btn-confirm:hover span {
+  color: white;
+}
+
